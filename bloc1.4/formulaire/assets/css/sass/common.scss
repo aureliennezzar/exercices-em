@@ -1,0 +1,14 @@
+//placeholders
+%center {
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+%centerFlex {
+	align-items: center;
+	justify-content: center;
+}
+%flexCol {
+	display: flex;
+	flex-direction: column;
+}
