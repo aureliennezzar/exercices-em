@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header_top">
+			<ul class="header-breadcrumb">
+				<li><a href="#">Voyageurs</a></li>
+				<li>Billets & Ifos trajets</li>
+			</ul>
+		</div>
+		<div class="header_bottom">
+			<h1>réservation</h1>
+			<picture>
+				<img />
+			</picture>
+		</div>
+	</header>
+	<main class="main">
+		<form class="main-form">
+			<div class="form_header">
+				<div class="form-text">
+					<p>Voyageur handicapé, rendez-vous sur votre <a class="btn link" href="#">espace dédié.</a></p>
+					<a href="#" class="btn link">gérer mes réservations</a>
+				</div>
+				<div class="form-mandatory">
+					<p>* Champs obligatoire</p>
+				</div>
+			</div>
+			<div class="form_content">
+
+				<!-- ROUNDTRIP CHECKBOX -->
+				<div class="round-trip-checkbox">
+					<input type="checkbox" id="roundtrip" name="roundtrip">
+					<label for="roundtrip">Aller et retour différents</label>
+				</div>
+
+				<!-- TRIP INPUTS -->
+				<div class="trip-inputs">
+
+					<div class="form-stations">
+						<input type="text" id="departure-station" name="departure-station" class="form-input-text">
+						<label for="departure-station" class="form-label mandatory">Départ</label>
+
+						<input type="text" id="arrival-station" name="arrival-station" class="form-input-text">
+						<label for="arrival-station" class="form-label mandatory">Arrivée</label>
+					</div>
+
+					<div class="form-dates">
+						<div class="form-departure">
+							<label for="departure-date" class="form-label mandatory">Aller le</label>
+							<input type="date" id="departure-date" name="departure-date">
+
+							<select name="departure-preference" class="departure-preference">
+								<option value="departure-at">Départ à</option>
+								<option value="arrival-at">Arrivé à</option>
+							</select>
+
+							<select name="departure-hour" class="departure-hour">
+								<option value="17">17h</option>
+								<option value="16">16h</option>
+								<option value="15">15h</option>
+								<option value="14">14h</option>
+								<option value="13">13h</option>
+								<option value="12">12h</option>
+								<option value="11">11h</option>
+								<option value="10">10h</option>
+								<option value="9">9h</option>
+								<option value="8">8h</option>
+								<option value="7">7h</option>
+							</select>
+
+						</div>
+						
+						<div class="form-return">
+							<label for="return-date" class="form-label mandatory">Retour le</label>
+							<input type="date" id="return-date" name="return-date">
+
+							<select name="return-preference" class="return-preference">
+								<option value="departure-at">Départ à</option>
+								<option value="arrival-at">Arrivé à</option>
+							</select>
+
+							<select name="return-hour" class="return-hour">
+								<option value="17">17h</option>
+								<option value="16">16h</option>
+								<option value="15">15h</option>
+								<option value="14">14h</option>
+								<option value="13">13h</option>
+								<option value="12">12h</option>
+								<option value="11">11h</option>
+								<option value="10">10h</option>
+								<option value="9">9h</option>
+								<option value="8">8h</option>
+								<option value="7">7h</option>
+							</select>
+							
+						</div>
+
+						<div class="route-informations">
+
+							<div class="direct-route">
+								<input type="checkbox" id="direct-route" name="direct-route">
+								<label for="direct-route">Trajet direct</label>
+							</div>
+							
+							<div class="route-by">
+								<label for="route-by">Trajet direct</label>
+								<input type="text" id="route-by" name="route-by" class="form-input-text">
+							</div>
+
+						</div>
+					</div>
+				</div>
+				
+				<!-- TRIP CONFORT -->
+				<!-- TRIP PASSENGERS -->
+			</div>
+			<div class="form_footer">
+
+			</div>
+		</form>
+	</main>
+	<footer>
+
+	</footer>
+	<script src="./assets/js/app.js"></script>
+</body>
+
+</html>
