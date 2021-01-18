@@ -28,7 +28,7 @@
 			<div class="form_header">
 				<div class="form-text">
 					<p>Voyageur handicapé, rendez-vous sur votre <a class="btn link" href="#">espace dédié.</a></p>
-					<a href="#" class="btn link">gérer mes réservations</a>
+					<a href="#" class="btn link-arrow">gérer mes réservations</a>
 				</div>
 				<div class="form-mandatory">
 					<p>* Champs obligatoire</p>
@@ -78,7 +78,7 @@
 							</select>
 
 						</div>
-						
+
 						<div class="form-return">
 							<label for="return-date" class="form-label mandatory">Retour le</label>
 							<input type="date" id="return-date" name="return-date">
@@ -101,36 +101,103 @@
 								<option value="8">8h</option>
 								<option value="7">7h</option>
 							</select>
-							
+
 						</div>
 
 						<div class="route-informations">
-
 							<div class="direct-route">
 								<input type="checkbox" id="direct-route" name="direct-route">
 								<label for="direct-route">Trajet direct</label>
 							</div>
-							
+
 							<div class="route-by">
-								<label for="route-by">Trajet direct</label>
+								<label for="route-by">Ou trajet via</label>
 								<input type="text" id="route-by" name="route-by" class="form-input-text">
 							</div>
-
 						</div>
 					</div>
 				</div>
-				
+
 				<!-- TRIP CONFORT -->
+				<div class="trip-confort">
+					<h3 class="h3">confort</h3>
+
+					<div class="trip-confort-option">
+						<input type="radio" id="first-class" name="confort-radios" value="first-class" checked>
+						<label for="first-class">1ère classe</label>
+					</div>
+
+					<div class="trip-confort-option">
+						<input type="radio" id="second-class" name="confort-radios" value="second-class">
+						<label for="second-class">2nd classe</label>
+					</div>
+
+				</div>
 				<!-- TRIP PASSENGERS -->
+				<div class="trip-passengers">
+					<div class="trip-passengers_top">
+						<div class="passengers-count">
+							<h2 class="h2">passagers</h2>
+							<select name="passengers-number" class="passengers-number">
+								<option value="1">1</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+						</div>
+						<a href="#" class="btn link-arrow">plus que 9 passagers</a>
+					</div>
+					<div class="trip-passengers_content">
+						<div class="passengers-top">
+							<h3 class="h3">passager 1</h3>
+						</div>
+						<div class="passengers-content">
+							<div class="passengers-left">
+
+								<label class="form-label" for="passenger-profile">profil du passager</label>
+								<select name="passenger-profile" class="passenger-profile" id="passenger-profile">
+									<option value="1">1</option>
+								</select>
+
+								<label class="form-label" for="passenger-profile">profil du passager</label>
+								<select name="passenger-profile" class="passenger-profile" id="passenger-profile">
+									<option value="1">1</option>
+								</select>
+
+								<label class="form-label" for="loyalty-program">profil du passager</label>
+								<select name="loyalty-program" class="loyalty-program" id="loyalty-program">
+									<option value="1">1</option>
+								</select>
+
+							</div>
+							<div class="passengers-right">
+								<label for="coupon-code" class="form-label">Code avantage</label>
+								<input type="text" id="coupon-code" name="coupon-code" class="form-input-text"
+									placeholder="Saisissez ici votre code">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="form_footer">
-
+				<div class="dropdown-pets-infos">
+					voayager avec votre animal de compagnie
+				</div>
+				<div class="form_footer-actions">
+					<a href="#" class="btn secondary-btn">horaires seuls</a>
+					<button type="submit" class="btn primary-btn">rechercher</button>
+				</div>
+				<a href="#" class="btn link-arrow">informations sur les emissions de co2</a>
 			</div>
 		</form>
 	</main>
-	<footer>
-
-	</footer>
 	<script src="./assets/js/app.js"></script>
 </body>
 
