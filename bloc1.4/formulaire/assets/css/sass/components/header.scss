@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    &_top,
+    &_bottom {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &_bottom {
+        border-bottom: 1px solid $primary-grey;
+    }
+    &-breadcrumb {
+        list-style: none;
+        li {
+            display: inline;
+            a {
+                @extend .dgrey;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &:last-child::after {
+                content: "\00a0/";
+            }
+        }
+        li + li:before {
+            content: "/\00a0";
+        }
+    }
+    &-action {
+        display: flex;
+        a {
+            display: inline;
+        }
+    }
+}

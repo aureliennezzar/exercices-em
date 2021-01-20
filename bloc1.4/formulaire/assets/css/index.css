@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.form-stations, .form-dates, .form .trip-passengers_top, .form .trip-inputs .route-informations .direct-route, .form .trip-inputs .route-informations, .form-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mandatory:after {
+  content: " *";
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.h1 {
+  font-size: 50px;
+}
+
+.h2 {
+  font-size: 25px;
+}
+
+.red, .form .trip-passengers_content .passengers-top .title, .btn-print i:before, .btn-share i:before, .btn-grey, .btn.link-arrow {
+  color: #cc0044;
+}
+
+.white, .btn-red {
+  color: #fff;
+}
+
+.grey {
+  color: #f1f1f1;
+}
+
+.dgrey, .header-breadcrumb li a, .form_content .round-trip-checkbox {
+  color: #919191;
+}
+
+.black {
+  color: #3e4044;
+}
+
+.bg-red {
+  background: #cc0044;
+}
+
+.bg-grey, .form .trip-passengers_content, .form_content .round-trip-checkbox {
+  background: #f1f1f1;
+}
+
+.bg-dgrey {
+  background: #919191;
+}
+
+.bg-black {
+  background: #3e4044;
+}
+
+.btn {
+  display: inline;
+  border: none;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+}
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.btn:focus {
+  outline: none;
+}
+.btn.link-arrow {
+  text-transform: uppercase;
+}
+.btn.link:hover {
+  text-decoration: underline;
+}
+.btn-primary {
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid;
+}
+.btn-red {
+  border-color: #cc0044;
+  background: #cc0044;
+  background: linear-gradient(0deg, #7c0029 0%, #cc0044 57%);
+}
+.btn-grey {
+  border-color: #919191;
+  background: #f1f1f1;
+  background: linear-gradient(0deg, #f1f1f1 0%, #fff 57%);
+}
+.btn-print i:before, .btn-share i:before {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+}
+
+.form .trip-inputs {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #f1f1f1;
+}
+.form .trip-inputs .inputs-item {
+  flex: 1 auto;
+}
+.form .trip-confort {
+  display: flex;
+  border-bottom: 1px solid #f1f1f1;
+}
+.form .trip-passengers_top {
+  width: 100%;
+}
+.form .trip-passengers_top .passengers-count {
+  display: flex;
+}
+.form .trip-passengers_content .passengers-top {
+  border-bottom: 1px solid #919191;
+}
+.form .trip-passengers_content .passengers-content {
+  display: flex;
+  justify-content: space-between;
+}
+.form .trip-passengers_content .passengers-left, .form .trip-passengers_content .passengers-right {
+  display: flex;
+  flex: 1 auto;
+}
+.form .trip-passengers_content .passengers-left {
+  flex-direction: column;
+}
+.form-stations .station-option {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header_top, .header_bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.header_bottom {
+  border-bottom: 1px solid #f1f1f1;
+}
+.header-breadcrumb {
+  list-style: none;
+}
+.header-breadcrumb li {
+  display: inline;
+}
+.header-breadcrumb li a {
+  text-decoration: none;
+}
+.header-breadcrumb li a:hover {
+  text-decoration: underline;
+}
+.header-breadcrumb li:last-child::after {
+  content: " /";
+}
+.header-breadcrumb li + li:before {
+  content: "/ ";
+}
+.header-action {
+  display: flex;
+}
+.header-action a {
+  display: inline;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,74 @@
+.form {
+    &_header {
+    }
+    &-text {
+        @extend %flexBetween;
+    }
+    &_content {
+        .round-trip-checkbox {
+            @extend .bg-grey, .dgrey;
+        }
+    }
+    .trip {
+        &-inputs {
+            display: flex;
+            flex-direction: column;
+            .route-informations {
+                @extend %flexBetween;
+                .direct-route {
+                    @extend %flexBetween;
+                }
+            }
+            border-bottom: 1px solid $primary-grey;
+            .inputs-item {
+                flex: 1 auto;
+            }
+        }
+        &-confort {
+            display: flex;
+            border-bottom: 1px solid $primary-grey;
+        }
+        &-passengers {
+            &_top {
+                @extend %flexBetween;
+                width: 100%;
+                .passengers-count {
+                    display: flex;
+                }
+            }
+            &_content {
+                @extend .bg-grey;
+                .passengers {
+                    &-top {
+                        .title {
+                            @extend .red;
+                        }
+                        border-bottom: 1px solid $primary-grey-dark;
+                    }
+                    &-content {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    &-left,
+                    &-right {
+                        display: flex;
+                        flex: 1 auto;
+                    }
+                    &-left {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+    &-stations,
+    &-dates {
+        @extend %flexBetween;
+    }
+    &-stations {
+        .station-option {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
