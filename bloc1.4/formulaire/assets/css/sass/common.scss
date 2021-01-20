@@ -21,7 +21,7 @@
 		content: "\00a0*";
 	}
 }
-label{
+label {
 	user-select: none;
 }
 //TITLES
@@ -36,7 +36,12 @@ label{
 }
 .h3 {
 }
-p,label,h1,h2,h3,h4{
+p,
+label,
+h1,
+h2,
+h3,
+h4 {
 	font-family: "Avenir-Medium";
 	font-weight: lighter;
 }
@@ -102,6 +107,18 @@ $primary-grey-dark: #919191;
 	&.link-arrow {
 		@extend .red;
 		text-transform: uppercase;
+		position: relative;
+		height: 21px;
+		.icon-right-arrow {
+			margin-left: 5px;
+			transition: all 0.2s ease-in-out;
+		}
+		&:hover {
+			.icon-right-arrow {
+				margin-left: 10px;
+				transition: all 0.2s ease-in-out;
+			}
+		}
 	}
 	&.link {
 		&:hover {

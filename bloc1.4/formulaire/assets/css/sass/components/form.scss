@@ -1,7 +1,15 @@
 .form {
+    @extend .dgrey;
     padding: 0 20px;
+    input[type="text"] {
+        padding: 5px 10px;
+    }
     &_header {
-        padding: 10px 0;
+        padding: 20px 0;
+        .disabled-text {
+            display: flex;
+            align-items: center;
+        }
     }
     &_footer {
         @extend %flexCol;
@@ -13,6 +21,13 @@
         }
         .link-arrow {
             text-align: right;
+        }
+        .dropdown-pets-infos {
+            user-select: none;
+            cursor: pointer;
+            .icon-right-arrow {
+                @extend .red;
+            }
         }
     }
     &-text {
@@ -40,6 +55,7 @@
             }
             .route-informations {
                 @extend %flexBetween;
+                align-items: center;
                 .direct-route {
                     @extend %flexBetween;
                 }
@@ -66,7 +82,7 @@
                 margin-left: 20px;
                 display: flex;
                 align-items: center;
-                input{
+                input {
                     margin-right: 10px;
                 }
             }
@@ -106,19 +122,20 @@
                         width: 50%;
                     }
                     &-left {
-                        label{
+                        label {
                             padding: 0;
                         }
                         .passengers-labels,
                         .passengers-options {
                             @extend %flexCol;
                         }
-                        .passenger-label, .option-select{
-                            &:not(:last-child){
+                        .passenger-label,
+                        .option-select {
+                            &:not(:last-child) {
                                 margin-bottom: 15px;
                             }
                         }
-                        .passengers-options{
+                        .passengers-options {
                             margin-left: 10px;
                         }
                         .passenger-option:not(:last-child) {
@@ -128,8 +145,22 @@
                     &-right {
                         align-items: center;
                         justify-content: flex-end;
-                        .form-input-text {
-                            margin-left: 25px;
+                        .custom-input-coupon {
+                            position: relative;
+                            .form-input-text {
+                                margin-left: 25px;
+                                padding-right: 70px;
+                            }
+                            &::before {
+                                font-family: "icomoon";
+                                pointer-events: none;
+                                content: "\e904";
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                font-size: 25px;
+                                transform: translateY(-50%)
+                            }
                         }
                     }
                 }

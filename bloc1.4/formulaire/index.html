@@ -31,8 +31,12 @@
 		<form class="form">
 			<div class="form_header">
 				<div class="form-text">
-					<p>Voyageur handicapé, rendez-vous sur votre <a class="btn link red" href="#">espace dédié.</a></p>
-					<a href="#" class="btn link-arrow">gérer mes réservations</a>
+					<div class="disabled-text"><i class="icon-disabled"></i>
+						<p>Voyageur handicapé, rendez-vous sur votre <a class="btn link red" href="#">espace dédié.</a>
+						</p>
+					</div>
+
+					<a href="#" class="btn link-arrow">gérer mes réservations<span class="icon-right-arrow"></span></a>
 				</div>
 				<div class="form-mandatory">
 					<p>* Champs obligatoire</p>
@@ -165,7 +169,8 @@
 								<option value="10">10</option>
 							</select>
 						</div>
-						<a href="#" class="btn link-arrow">plus que 9 passagers</a>
+						<a href="#" class="btn link-arrow">plus que 9 passagers <span
+								class="icon-right-arrow"></span></a>
 					</div>
 
 					<div class="trip-passengers_content">
@@ -177,27 +182,34 @@
 						<div class="passengers-content">
 							<div class="passengers-left">
 								<div class="passengers-labels">
-									<label class="form-label passenger-label" for="passenger-profile">profil du passager</label>
-									<label class="form-label passenger-label" for="subscription">Carte et Abonnement</label>
-									<label class="form-label passenger-label" for="loyalty-program">Programme de fidélité</label>
+									<label class="form-label passenger-label" for="passenger-profile">profil du
+										passager</label>
+									<label class="form-label passenger-label" for="subscription">Carte et
+										Abonnement</label>
+									<label class="form-label passenger-label" for="loyalty-program">Programme de
+										fidélité</label>
 								</div>
 
 								<div class="passengers-options">
-									<select name="passenger-profile" class="passenger-profile option-select" id="passenger-profile">
-										<option value="1">1</option>
+									<select name="passenger-profile" class="passenger-profile option-select"
+										id="passenger-profile">
+										<option value="26_59">26-59 ans</option>
 									</select>
 									<select name="subscription" class="subscription option-select" id="subscription">
-										<option value="1">1</option>
+										<option value="default">Carte et Abonnement</option>
 									</select>
-									<select name="loyalty-program" class="loyalty-program option-select" id="loyalty-program">
-										<option value="1">1</option>
+									<select name="loyalty-program" class="loyalty-program option-select"
+										id="loyalty-program">
+										<option value="default">Programme fidélité</option>
 									</select>
 								</div>
 							</div>
 							<div class="passengers-right">
 								<label for="coupon-code" class="form-label">Code avantage</label>
-								<input type="text" id="coupon-code" name="coupon-code" class="form-input-text"
-									placeholder="Saisissez ici votre code">
+								<div class="custom-input-coupon">
+									<input type="text" id="coupon-code" name="coupon-code" class="form-input-text"
+										placeholder="Saisissez ici votre code">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -205,13 +217,14 @@
 			</div>
 			<div class="form_footer">
 				<div class="dropdown-pets-infos">
-					Voyager avec votre animal de compagnie
+					<span class="icon-right-arrow"></span> Voyager avec votre animal de compagnie
 				</div>
 				<div class="form_footer-actions">
 					<a href="#" class="btn btn-primary btn-grey">horaires seuls</a>
 					<button type="submit" class="btn btn-primary btn-red">rechercher</button>
 				</div>
-				<a href="#" class="btn link-arrow">informations sur les emissions de co2</a>
+				<a href="#" class="btn link-arrow">informations sur les emissions de co2<span
+						class="icon-right-arrow"></span></a>
 			</div>
 		</form>
 	</main>

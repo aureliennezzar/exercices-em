@@ -40,6 +40,8 @@
 
 .icon-right-arrow:before {
   content: "";
+  font-size: 7px;
+  font-weight: bolder;
 }
 
 .icon-printer:before {
@@ -48,6 +50,10 @@
 
 .icon-disabled:before {
   content: "";
+}
+
+.icon-disabled {
+  font-size: 30px;
 }
 
 .icon-share:before {
@@ -173,12 +179,17 @@ label {
   font-size: 25px;
 }
 
-p, label, h1, h2, h3, h4 {
+p,
+label,
+h1,
+h2,
+h3,
+h4 {
   font-family: "Avenir-Medium";
   font-weight: lighter;
 }
 
-.red, .form .trip-passengers_content .passengers-top .title, .btn-print i:before, .btn-share i:before, .btn-grey, .btn.link-arrow {
+.red, .form .trip-passengers_content .passengers-top .title, .form_footer .dropdown-pets-infos .icon-right-arrow, .btn-print i:before, .btn-share i:before, .btn-grey, .btn.link-arrow {
   color: #cc0044;
 }
 
@@ -190,11 +201,11 @@ p, label, h1, h2, h3, h4 {
   color: #f1f1f1;
 }
 
-.dgrey, .header-breadcrumb li a, .form_content .round-trip-checkbox {
+.dgrey, .header-breadcrumb li a, .form_content .round-trip-checkbox, .form {
   color: #919191;
 }
 
-.black {
+.black, .icon-disabled {
   color: #3e4044;
 }
 
@@ -235,6 +246,16 @@ p, label, h1, h2, h3, h4 {
 }
 .btn.link-arrow {
   text-transform: uppercase;
+  position: relative;
+  height: 21px;
+}
+.btn.link-arrow .icon-right-arrow {
+  margin-left: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.btn.link-arrow:hover .icon-right-arrow {
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .btn.link:hover {
   text-decoration: underline;
@@ -264,8 +285,15 @@ p, label, h1, h2, h3, h4 {
 .form {
   padding: 0 20px;
 }
+.form input[type=text] {
+  padding: 5px 10px;
+}
 .form_header {
-  padding: 10px 0;
+  padding: 20px 0;
+}
+.form_header .disabled-text {
+  display: flex;
+  align-items: center;
 }
 .form_footer {
   width: 100%;
@@ -276,6 +304,10 @@ p, label, h1, h2, h3, h4 {
 }
 .form_footer .link-arrow {
   text-align: right;
+}
+.form_footer .dropdown-pets-infos {
+  user-select: none;
+  cursor: pointer;
 }
 .form-text {
   margin-bottom: 15px;
@@ -294,6 +326,9 @@ p, label, h1, h2, h3, h4 {
 }
 .form .trip-inputs .inputs-wrapper:not(:last-child) {
   margin-bottom: 20px;
+}
+.form .trip-inputs .route-informations {
+  align-items: center;
 }
 .form .trip-inputs .inputs-item {
   flex: 1 auto;
@@ -348,7 +383,8 @@ p, label, h1, h2, h3, h4 {
 .form .trip-passengers_content .passengers-left label {
   padding: 0;
 }
-.form .trip-passengers_content .passengers-left .passenger-label:not(:last-child), .form .trip-passengers_content .passengers-left .option-select:not(:last-child) {
+.form .trip-passengers_content .passengers-left .passenger-label:not(:last-child),
+.form .trip-passengers_content .passengers-left .option-select:not(:last-child) {
   margin-bottom: 15px;
 }
 .form .trip-passengers_content .passengers-left .passengers-options {
@@ -361,8 +397,22 @@ p, label, h1, h2, h3, h4 {
   align-items: center;
   justify-content: flex-end;
 }
-.form .trip-passengers_content .passengers-right .form-input-text {
+.form .trip-passengers_content .passengers-right .custom-input-coupon {
+  position: relative;
+}
+.form .trip-passengers_content .passengers-right .custom-input-coupon .form-input-text {
   margin-left: 25px;
+  padding-right: 70px;
+}
+.form .trip-passengers_content .passengers-right .custom-input-coupon::before {
+  font-family: "icomoon";
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 25px;
+  transform: translateY(-50%);
 }
 .form-stations .station-option {
   display: flex;
