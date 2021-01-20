@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?md4ptt");
+  src: url("../fonts/icomoon.eot?md4ptt#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?md4ptt") format("truetype"),
+    url("../fonts/icomoon.woff?md4ptt") format("woff"), url("../fonts/icomoon.svg?md4ptt#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("../fonts/Avenir-Medium.eot");
+  src: url("../fonts/Avenir-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir-Medium.woff2") format("woff2"),
+    url("../fonts/Avenir-Medium.woff") format("woff"), url("../fonts/Avenir-Medium.ttf") format("truetype"),
+    url("../fonts/Avenir-Medium.svg#Avenir-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/AvenirBook.eot");
+  src: url("../fonts/AvenirBook.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirBook.woff2") format("woff2"),
+    url("../fonts/AvenirBook.woff") format("woff"), url("../fonts/AvenirBook.ttf") format("truetype"),
+    url("../fonts/AvenirBook.svg#AvenirBook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-right-arrow:before {
+  content: "\e900";
+}
+.icon-printer:before {
+  content: "\e901";
+}
+.icon-disabled:before {
+  content: "\e902";
+}
+.icon-share:before {
+  content: "\e903";
+}
+.icon-infos:before {
+  content: "\e904";
+}

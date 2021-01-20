@@ -1,11 +1,15 @@
 .header {
-    display: flex;
-    flex-direction: column;
+    @extend %flexCol;
+    padding-top: 10px;
     &_top,
     &_bottom {
-        display: flex;
         width: 100%;
-        justify-content: space-between;
+        @extend %flexBetween;
+        padding: 0 20px;
+    }
+    &_top{
+        padding-top: 10px;
+
     }
     &_bottom {
         border-bottom: 1px solid $primary-grey;

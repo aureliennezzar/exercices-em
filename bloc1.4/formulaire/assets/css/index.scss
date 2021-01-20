@@ -1,5 +1,7 @@
+@import "../fonts/fonts.scss";
 @import "./sass/reset";
 @import "./sass/common";
 @import "./sass/components";
-body{
+html{
+    font-family: "Avenir-Medium";
 }

@@ -21,6 +21,9 @@
 		content: "\00a0*";
 	}
 }
+label{
+	user-select: none;
+}
 //TITLES
 .title {
 	text-transform: uppercase;
@@ -32,6 +35,10 @@
 	font-size: 25px;
 }
 .h3 {
+}
+p,label,h1,h2,h3,h4{
+	font-family: "Avenir-Medium";
+	font-weight: lighter;
 }
 //COLORS
 $primary-black: #3e4044;

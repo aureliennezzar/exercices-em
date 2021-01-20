@@ -1,18 +1,43 @@
 .form {
+    padding: 0 20px;
     &_header {
+        padding: 10px 0;
+    }
+    &_footer {
+        @extend %flexCol;
+        width: 100%;
+        padding: 20px 0;
+        &-actions {
+            @extend %flexBetween;
+            margin: 50px 0 20px 0;
+        }
+        .link-arrow {
+            text-align: right;
+        }
     }
     &-text {
         @extend %flexBetween;
+        margin-bottom: 15px;
     }
     &_content {
         .round-trip-checkbox {
             @extend .bg-grey, .dgrey;
+            padding: 10px;
         }
+    }
+    &-mandatory {
+        font-style: italic;
     }
     .trip {
         &-inputs {
             display: flex;
             flex-direction: column;
+            padding: 20px 0;
+            .inputs-wrapper {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
             .route-informations {
                 @extend %flexBetween;
                 .direct-route {
@@ -21,41 +46,91 @@
             }
             border-bottom: 1px solid $primary-grey;
             .inputs-item {
+                &:nth-child(1) {
+                    padding-right: 30px;
+                }
                 flex: 1 auto;
+                .date-content {
+                    @extend %flexBetween;
+                    input {
+                        width: 50%;
+                    }
+                }
             }
         }
         &-confort {
             display: flex;
             border-bottom: 1px solid $primary-grey;
+            padding: 10px 0;
+            &-option {
+                margin-left: 20px;
+                display: flex;
+                align-items: center;
+                input{
+                    margin-right: 10px;
+                }
+            }
         }
         &-passengers {
+            padding: 20px 0 30px 0;
+            border-bottom: 1px solid $primary-grey-dark;
             &_top {
                 @extend %flexBetween;
+                padding-bottom: 15px;
                 width: 100%;
                 .passengers-count {
                     display: flex;
+                    .title {
+                        margin-right: 20px;
+                    }
                 }
             }
             &_content {
                 @extend .bg-grey;
+                padding: 20px;
                 .passengers {
                     &-top {
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid $primary-grey-dark;
                         .title {
                             @extend .red;
                         }
-                        border-bottom: 1px solid $primary-grey-dark;
                     }
                     &-content {
-                        display: flex;
-                        justify-content: space-between;
+                        @extend %flexBetween;
+                        padding: 20px 0 10px 0;
                     }
                     &-left,
                     &-right {
                         display: flex;
-                        flex: 1 auto;
+                        width: 50%;
                     }
                     &-left {
-                        flex-direction: column;
+                        label{
+                            padding: 0;
+                        }
+                        .passengers-labels,
+                        .passengers-options {
+                            @extend %flexCol;
+                        }
+                        .passenger-label, .option-select{
+                            &:not(:last-child){
+                                margin-bottom: 15px;
+                            }
+                        }
+                        .passengers-options{
+                            margin-left: 10px;
+                        }
+                        .passenger-option:not(:last-child) {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    &-right {
+                        align-items: center;
+                        justify-content: flex-end;
+                        .form-input-text {
+                            margin-left: 25px;
+                        }
                     }
                 }
             }

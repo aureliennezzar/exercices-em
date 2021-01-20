@@ -65,6 +65,9 @@ button,
 textarea,
 select {
   font: inherit;
+  &:focus{
+    outline: none;
+  }
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
